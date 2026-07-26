@@ -3,14 +3,38 @@ module(
     version = "0.0.0",
 )
 
-bazel_dep(name = "llvm", version = "0.8.11")
-bazel_dep(name = "bazel_lib", version = "3.2.2")
-bazel_dep(name = "platforms", version = "1.1.0")
-bazel_dep(name = "rules_cc", version = "0.2.20")
-bazel_dep(name = "rules_rs", version = "0.0.92")
-bazel_dep(name = "rules_shell", version = "0.6.1")
-bazel_dep(name = "tar.bzl", version = "0.10.4")
-bazel_dep(name = "with_cfg.bzl", version = "0.14.6")
+bazel_dep(
+    name = "llvm",
+    version = "0.8.11",
+)
+bazel_dep(
+    name = "bazel_lib",
+    version = "3.2.2",
+)
+bazel_dep(
+    name = "platforms",
+    version = "1.1.0",
+)
+bazel_dep(
+    name = "rules_cc",
+    version = "0.2.20",
+)
+bazel_dep(
+    name = "rules_rs",
+    version = "0.0.92",
+)
+bazel_dep(
+    name = "rules_shell",
+    version = "0.6.1",
+)
+bazel_dep(
+    name = "tar.bzl",
+    version = "0.10.4",
+)
+bazel_dep(
+    name = "with_cfg.bzl",
+    version = "0.14.6",
+)
 
 # rules_rs normally selects a published bpf-linker binary for BPF toolchains.
 # This repository must select //:bpf-linker so the tests exercise the binary
@@ -38,7 +62,7 @@ llvm_source.from_archive(
         "@llvm//3rd_party/llvm-project/x.x/patches:llvm-abi-breaking-checks.patch",
     ],
     strip_prefix = "llvm-project-52ed14fcd56afc30f9cccd8ca8ce237c2eef7e04",
-    urls = ["https://github.com/rust-lang/llvm-project/archive/0000000000000000000000000000000000000000.tar.gz"],
+    urls = ["https://github.com/rust-lang/llvm-project/archive/52ed14fcd56afc30f9cccd8ca8ce237c2eef7e04.tar.gz"],
 )
 use_repo(llvm_source, "llvm-raw", "llvm_config", "llvm_zlib", "llvm_zstd")
 
