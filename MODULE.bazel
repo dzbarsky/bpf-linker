@@ -38,7 +38,7 @@ llvm_source.from_archive(
         "@llvm//3rd_party/llvm-project/x.x/patches:llvm-abi-breaking-checks.patch",
     ],
     strip_prefix = "llvm-project-52ed14fcd56afc30f9cccd8ca8ce237c2eef7e04",
-    urls = ["https://github.com/rust-lang/llvm-project/archive/52ed14fcd56afc30f9cccd8ca8ce237c2eef7e04.tar.gz"],
+    urls = ["https://github.com/rust-lang/llvm-project/archive/0000000000000000000000000000000000000000.tar.gz"],
 )
 use_repo(llvm_source, "llvm-raw", "llvm_config", "llvm_zlib", "llvm_zstd")
 
